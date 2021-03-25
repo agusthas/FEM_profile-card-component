@@ -1,0 +1,242 @@
+/*******************
+ Box Sizing
+ *******************/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/*******************
+ Core body defaults
+ @see https://hankchizljaw.com/wrote/a-modern-css-reset/
+ *******************/
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/****************************
+ Generic Margins and Paddings
+ ****************************/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+p,
+pre,
+blockquote,
+figure,
+figcaption,
+hr,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/*******************
+ Lists
+ *******************/
+ul {
+  list-style: none;
+}
+
+/*******************
+ Forms and buttons
+ *******************/
+input,
+textarea,
+select,
+button {
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+}
+
+/* I usually expand input and textarea to full-width */
+input[type=text],
+textarea {
+  width: 100%;
+}
+
+/* More friendly border */
+input,
+textarea,
+button {
+  border: 1px solid gray;
+}
+
+/* Some defaults for one-liner buttons */
+button {
+  padding: 0.75em 1em;
+  line-height: inherit;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+button * {
+  pointer-events: none;
+}
+
+/***********************************
+ Easy responsive for media elements
+ ***********************************/
+img,
+iframe,
+video,
+object,
+embed {
+  display: block;
+  max-width: 100%;
+}
+
+svg {
+  max-width: 100%;
+}
+
+/*******************
+ Useful table styles
+ *******************/
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+/*******************
+ The hidden attribute
+ *******************/
+[hidden] {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/*******************
+ Noscript
+ *******************/
+noscript {
+  display: block;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+/*******************
+ Tabindex
+ *******************/
+[tabindex="-1"] {
+  outline: none !important;
+}
+
+/*******************
+ * Screen-ready only class to hide content visually
+ * Solution by Joe Watkins.
+ * @see https://zellwk.com/blog/hide-content-accessibly/
+ *******************/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+body {
+  min-width: 100vw;
+  background-color: #19a2ae;
+  background-image: url(../images/bg-top-1.svg), url(../images/bg-bottom-1.svg);
+  background-position: right 50vw bottom 30vh, left 50vw top 58vh;
+  background-repeat: no-repeat;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+ul {
+  list-style: none;
+}
+
+a,
+a:hover,
+a:active {
+  color: inherit;
+}
+
+.l-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.o-dark-text {
+  color: #482d48;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.profile-card {
+  overflow: hidden;
+  box-shadow: 5px 15px 20px #168d98;
+  background: #fff;
+  border-radius: 1rem;
+  color: #969696;
+}
+.profile-card__content {
+  text-align: center;
+}
+.profile-card__content .photo {
+  border: 5px solid #fff;
+  border-radius: 50%;
+  margin: 0 auto;
+  transform: translateY(-50%);
+}
+.profile-card__content .name {
+  margin-top: -1.81rem;
+}
+.profile-card__content .age {
+  color: #969696;
+  font-weight: 400;
+  margin-left: 0.3rem;
+}
+.profile-card__content .city {
+  font-size: 0.875rem;
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+}
+.profile-card .stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1.5rem 1.5rem 1.3rem 1.5rem;
+  border-top: 1px solid #e8e9ec;
+  text-align: center;
+}
+.profile-card .stats__label {
+  font-size: 0.625rem;
+  letter-spacing: 0.12rem;
+  margin-top: 0.2rem;
+}
+
+.attribution {
+  font-size: 0.625rem;
+  margin-top: 2rem;
+}
+
+/*# sourceMappingURL=style.css.map */
